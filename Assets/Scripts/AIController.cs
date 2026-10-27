@@ -5,6 +5,7 @@ public class AIController : MonoBehaviour
 {
     public NavMeshAgent Agent { get; private set; }
     public AIAnimationController aiAnimationController { get; private set; }
+    public StateMachine StateMachine { get; private set; }
     // public Animator Animator { get; private set; } // Not needed since we're not using animations
     public Transform[] Waypoints;
     public Transform Player;
