@@ -6,13 +6,15 @@ using UnityEngine;
 public class IdleState : IState
 {
 
-    private AIcontroller aicontroller;
-    private float idleDuraturation = 2f;
-    private StateType Type => StateType.Idle;
+    private AIController aiController;
+    private float idleDuration = 2f;
+    private float idleTimer; 
 
-    public IdleState(AIcontroller aiController)
+    public StateType Type => StateType.Idle;
+
+    public IdleState(AIController aiController)
     {
-        this.aicontroller = aiController;
+        this.aiController = aiController;
     }
 
     public void Enter()
@@ -23,9 +25,9 @@ public class IdleState : IState
     public void Execute()
     {
         idleTimer += Time.deltaTime;
-        if (idleTimer >= idleDuraturation)
+        if (idleTimer >= idleDuration)
         {
-            aicontroller.StateMachhine.TransitionToState(StateType.Patrol);
+            aiController.StateMachine.TransitionToState(StateType.Patrol);
         }
     }
 

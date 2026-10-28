@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-ublic class AttackState : IState
+public class AttackState : IState
 {
     private AIController aiController;
     private float attackCooldown = 1.5f; // seconds between attacks

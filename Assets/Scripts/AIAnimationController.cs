@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public class AIAnimationController : MonoBehaviour
-{
+
     [RequireComponent(typeof(Animator))]
     public class AIAnimationController : MonoBehaviour
     {
@@ -32,9 +31,9 @@ public class AIAnimationController : MonoBehaviour
             if (aiController.CheckHandsCollision(out objectHit, "Player"))
             {
                 
-               SceneManager.LoadScene(0);
+           SceneManager.LoadScene(0);
                 
             }
         }
     }
-}
+
